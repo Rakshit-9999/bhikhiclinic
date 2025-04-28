@@ -115,11 +115,11 @@ $promo_end_date = "2025/05/28 ";
               <div class="d-flex ml-auto">
                 <a href="#" class="d-flex align-items-center ml-auto mr-4">
                   <span class="icon-phone mr-2"></span>
-                  <span class="d-none d-md-inline-block">90419-11360</span>
+                  <span class="d-none d-md-inline-block">79862-16497</span>
                 </a>
                 <a href="#" class="d-flex align-items-center">
                   <span class="icon-envelope mr-2"></span>
-                  <span class="d-none d-md-inline-block">mdclinicphagwarapb@gmail.com</span>
+                  <span class="d-none d-md-inline-block">bhikhiwinddentalclinic@gmail.com</span>
                 </a>
               </div>
             </div>
@@ -130,14 +130,13 @@ $promo_end_date = "2025/05/28 ";
         <div class="container py-1">
           <div class="row align-items-center">
             <div class="col-2">
-              <h2 class="mb-0 site-logo"><a href="index.php">Modern Dental Clinic Phagwara</a></h2>
+              <h2 class="mb-0 site-logo"><a href="index.php">Dental Clinic Bhikhiwind</a></h2>
             </div>
             <div class="col-10">
               <nav class="site-navigation text-right" role="navigation">
                 <div class="container">
                   <div class="d-inline-block d-lg-none ml-md-0 mr-auto py-3"><a href="#" class="site-menu-toggle js-menu-toggle text-white"><span class="icon-menu h3"></span></a></div>
                   <ul class="site-menu js-clone-nav d-none d-lg-block">
-                    <li><a href="contact.php">Book</a></li>
                     <li class="active"><a href="index.php">Home</a></li>
                     <li><a href="about.html">About Us</a></li>
                     <li><a href="services.html">Services</a></li>
@@ -282,7 +281,7 @@ $promo_end_date = "2025/05/28 ";
           <h2 class="site-heading text-black">Online <strong>Appointment</strong> Request Form</h2>
           <p class="lead text-black">Easily schedule your visit with us by filling out the form below. Simply select your preferred date and time, and we will confirm your appointment. We look forward to welcoming you!</p>
           <div class="embed-responsive embed-responsive-16by9">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3412.275087065104!2d75.76877867592782!3d31.213107274356283!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391af53132299b43%3A0x150c4705b4fda48e!2sModern%20Dental%20Clinic%20%7C%20Best%20dentist%20in%20Phagwara%20%7C%20Best%20Oral%20Surgeon%20in%20Phagwara%20%7C%20Dentist%20near%20Lpu%20%7C%20Dr%20Riar%20&#39;s%20Dental%20Clinic!5e0!3m2!1sen!2sin!4v1738417841970!5m2!1sen!2sin" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3407.4941076799973!2d74.6844475753015!3d31.345341555769334!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39199db55ebc9c47%3A0x8525bfab4b0a9a75!2sDr%20Parminder%20Sodhi!5e0!3m2!1sen!2sin!4v1745584092283!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
         </div>
       </div>
@@ -479,11 +478,11 @@ document.addEventListener('DOMContentLoaded', function() {
       </div>
     </div>
     <div class="phone cta">Call us</div>
-        <div class="phone number">+91 90419-11360</div>
+        <div class="phone number">+91 79862-16497</div>
     <div class="row pt-5 mt-5 text-center">
       <div class="col-md-12">
         <p>
-          Copyright &copy; <?php echo $current_year; ?> All rights reserved to <a href="https://rakshitsharma.netlify.app/">Rakshit Sharma</a>
+          Copyright &copy; <?php echo $current_year; ?> All rights reserved to <a href="">Tooth&Tech</a>
         </p>
       </div>
     </div>

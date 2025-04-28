@@ -47,29 +47,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (mail($to, $subject, $message, $headers)) {
             $successMessage = "Thank you! Your appointment request has been submitted. We will contact you shortly.";
             
-            // Save to database if needed (commented code example)
-            /*
-            $servername = "localhost";
-            $username = "username";
-            $password = "password";
-            $dbname = "dentist_appointments";
-            
-            $conn = new mysqli($servername, $username, $password, $dbname);
-            if ($conn->connect_error) {
-                die("Connection failed: " . $conn->connect_error);
-            }
-            
-            $sql = "INSERT INTO appointments (fname, lname, date, appointment_time, email, treatment, note)
-            VALUES ('$fname', '$lname', '$date', '$appointment_time', '$email', '$treatment', '$note')";
-            
-            if ($conn->query($sql) === TRUE) {
-                $successMessage = "Thank you! Your appointment request has been submitted. We will contact you shortly.";
-            } else {
-                $errorMessage = "Error: " . $sql . "<br>" . $conn->error;
-            }
-            
-            $conn->close();
-            */
+           
         } else {
             $errorMessage = "There was a problem sending your request. Please try again later.";
         }
@@ -251,11 +229,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['feedback_submit'])) {
                 
                 <a href="#" class="d-flex align-items-center ml-auto mr-4">
                   <span class="icon-phone mr-2"></span>
-                  <span class="d-none d-md-inline-block "style="text-shadow: 2px 2px 4px #FFFFFF; color: black;">90419-11360</span>
+                  <span class="d-none d-md-inline-block "style="text-shadow: 2px 2px 4px #FFFFFF; color: black;">79862-16497</span>
                 </a>
                 <a href="#" class="d-flex align-items-center">
                   <span class="icon-envelope mr-2"></span>
-                  <span class="d-none d-md-inline-block" style="text-shadow: 2px 2px 4px #FFFFFF; color: black;">mdclinicphagwarapb@gmail.com</span>
+                  <span class="d-none d-md-inline-block" style="text-shadow: 2px 2px 4px #FFFFFF; color: black;">bhikhiwinddentalclinic@gmail.com</span>
                 </a>
               </div>
             </div>
@@ -266,14 +244,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['feedback_submit'])) {
         <div class="container py-1">
           <div class="row align-items-center">
             <div class="col-2">
-<h4 class="mb-0 site-logo" style="text-shadow: 2px 2px 4px #000000;"><a href="index.php"><strong> Modern Dental Clinic Phagwara</strong></a></h4>            </div>
+<h4 class="mb-0 site-logo" style="text-shadow: 2px 2px 4px #000000;"><a href="index.php"><strong>Dental Clinic Bhikhiwind</strong></a></h4>            </div>
             <div class="col-10">
               <nav class="site-navigation text-right" role="navigation">
                 <div class="container">
                   <div class="d-inline-block d-lg-none ml-md-0 mr-auto py-3"><a href="#" class="site-menu-toggle js-menu-toggle text-white"><span class="icon-menu h3"></span></a></div>
 
                   <ul class="site-menu js-clone-nav d-none d-lg-block">
-                    <li class="active"  ><a href="contact.php">Book</a></li>
+                   
                     <li><a href="index.php">Home</a></li>
                     <li><a href="about.html">About Us</a></li>
                     <li><a href="services.html">Services</a></li>
@@ -304,22 +282,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['feedback_submit'])) {
 </div>
 </div>
 
-  
-<div class="site-section" style="background: linear-gradient(to bottom, #47817d, #3499da);">
+<div class="site-section " style="background: linear-gradient(to bottom, #ffffff, #308494);">
   <div class="container">
     <div class="row">
-      <div class="col-md-12 col-lg-6 mb-5 mb-lg-0">
-        <h2 class="site-heading text-white mb-5 "><strong style="color: white;">Appointment</strong></h2>
-        
-        <?php if (!empty($successMessage)): ?>
-        <div class="alert alert-success"><?php echo $successMessage; ?></div>
-        <?php endif; ?>
-        
-        <?php if (!empty($errorMessage)): ?>
-        <div class="alert alert-danger"><?php echo $errorMessage; ?></div>
-        <?php endif; ?>
-        
-        <form action="process_appointment.php" method="POST">
+      <div class="col-lg-6 mb-5 pl-lg-5 order-1 order-lg-2">
+        <div class="pl-lg-5 ml-lg-5">
+          <h2 class="site-heading text-black">Online <strong>Appointment</strong> Request Form</h2>
+          <p class="lead text-black">Easily schedule your visit with us by filling out the form below. Simply select your preferred date and time, and we will confirm your appointment. We look forward to welcoming you!</p>
+          <div class="embed-responsive embed-responsive-16by9">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3407.494107679997!2d74.68444757530152!3d31.345341555769345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39199db55ebc9c47%3A0x8525bfab4b0a9a75!2sDr%20Parminder%20Sodhi!5e0!3m2!1sen!2sin!4v1742747869947!5m2!1sen!2sin" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 order-2 order-lg-1">
+       <!-- Updated Appointment Form with Email Confirmation -->
+<form action="process_appointment.php" method="POST">
   <div class="row form-group">
     <div class="col-md-6 mb-3 mb-md-0">
       <label class="font-weight-bold" for="fname">First Name</label>
@@ -336,19 +313,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['feedback_submit'])) {
       <label class="font-weight-bold" for="mobile">Mobile Number</label>
       <input type="tel" id="mobile" class="form-control" placeholder="Mobile Number" name="mobile" pattern="[0-9]+" 
              oninput="this.value = this.value.replace(/[^0-9]/g, '')" required>
-      <small class="form-text text-muted">Numbers only</small>
     </div>
     <div class="col-md-6">
       <label class="font-weight-bold" for="email">Email</label> 
       <input type="email" id="email" class="form-control" placeholder="Email" name="email" required>
     </div>
+    
   </div>
   
   <div class="row form-group">
     <div class="col-md-6 mb-3 mb-md-0">
       <label class="font-weight-bold" for="date">Date</label> 
       <input type="date" id="date" class="form-control px-2" placeholder="Date of visit" name="date" 
-             min="<?php echo date('Y-m-d'); ?>" required>
+      min="<?php echo date('Y-m-d', strtotime('+2 days')); ?>" required>
+
     </div>
     <div class="col-md-6">
       <label class="font-weight-bold" for="appointment_time">Preferred Time</label> 
@@ -427,12 +405,40 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
       </div>
+    </div>
+  </div>
+</div>
+
+ 
+<!-- 
+<script>
+// JavaScript to ensure date input doesn't allow past dates
+document.addEventListener('DOMContentLoaded', function() {
+    // Set min date to today
+    const dateInput = document.getElementById('date');
+    const today = new Date().toISOString().split('T')[0];
+    dateInput.setAttribute('min', today);
+    
+    // Extra validation when form is submitted
+    document.querySelector('form').addEventListener('submit', function(e) {
+        const selectedDate = new Date(dateInput.value);
+        const currentDate = new Date();
+        currentDate.setHours(0, 0, 0, 0);
+        
+        if (selectedDate < currentDate) {
+            e.preventDefault();
+            alert('Please select a future date for your appointment.');
+        }
+    });
+});
+</script>
+      </div>
       <div class="col-md-12 col-lg-6">
         <h2 class="site-heading text-black mb-5" style ="color: white;">  <strong style="color: white;"> How Did We Do?</strong></h2>
      
   <div class="Button-wrapper">
     <button class="Button" onclick="window.location.href='Feedback.php'">Give FeedBack?</button>
-  </div>
+  </div> -->
   
   <!-- symbols -->
   <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
@@ -522,94 +528,49 @@ document.addEventListener('DOMContentLoaded', function() {
 </div>
 
 
-    <div class="promo py-5" style="background: linear-gradient(to bottom, #3499d9, #a40c0c);">
+    <div class="promo py-5" style="background: linear-gradient(to bottom, #308494,#ffffff);">
       <div class="container text-center">
-        <span class="d-block h3 mb-3 font-weight-bold text-white">Promo For Dental exam from <del> ₹1000</del> now <strong class="font-weight-bold">₹500</strong></span>
-        <div id="date-countdown" class="mt-0" data-countdown="2025/04/23"></div>
+        <span class="d-block h3 mb-3 font-weight-bold text-black ">Promo For Dental exam from <del> ₹1000</del> now <strong class="font-weight-bold">₹500</strong></span>
+        <div id="date-countdown" class="mt-0 text-black" data-countdown="2025/04/23"></div>
       </div>
     </div>
-    
-
     <footer class="site-footer" style="background: linear-gradient(to bottom, #a40c0c, #000000);">
 
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-4 mb-5 mb-lg-0">
-            <div class="row mb-5">
-              <div class="col-md-12">
-                <h3 class="footer-heading mb-4">Navigation</h3>
-              </div>
-              <div class="col-md-6 col-lg-6">
-                <ul class="list-unstyled">
-                  <li><a href="index.php">Home</a></li>
-                  <li><a href="services.html">Services</a></li>
-                  <li><a href="about.html">About us </a></li>
-                  <li><a href="contact.php">Contact Us</a></li>
-                  <li><a href="feedback.php">FeedBack </a></li>
-
-                </ul>
-              </div>
-              <div class="col-md-6 col-lg-6">
-                <ul class="list-unstyled">
-                 
-                </ul>
-              </div>
-            </div>
-
-            
-          </div>
-          
-
-          <div class="col-lg-4 mb-5 mb-lg-0">
-
-            <div class="mb-5">
-              <h3 class="footer-heading mb-2">FeedBack</h3>
-
-              <?php if (!empty($feedbackSuccess)): ?>
-              <div class="alert alert-success"><?php echo $feedbackSuccess; ?></div>
-              <?php endif; ?>
-              
-              <?php if (!empty($feedbackError)): ?>
-              <div class="alert alert-danger"><?php echo $feedbackError; ?></div>
-              <?php endif; ?>
-
-              <form action="https://api.web3forms.com/submit" method="POST">
-  <input type="hidden" name="access_key" value="d1e92cbf-7008-4ae8-8c0b-c3e250352acf" readonly>
-  <input type="hidden" name="success_url" value="https://your-website.com/success" readonly>
-  <div class="input-group mb-3">
-    <input type="text" class="form-control border-white text-white bg-transparent" name="message" placeholder="Send FeedBack" aria-label="Enter Email" aria-describedby="button-addon2">
-    <div class="input-group-append">
-      <button class="btn btn-primary" type="submit" id="button-addon2">Send</button>
+<div class="container">
+  <div class="row">
+    
+    <div class="col-lg-4 mx-auto">
+      <h2 class="footer-heading mb-4">Quick Links</h2>
+      <ul class="list-unstyled">
+        <li><a href="index.php">Home</a></li>
+        <li><a href="about.php">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.php">Contact</a></li>
+        <li><a href="feedback.php">Feedback</a></li>
+      </ul>
+    </div>
+    <div class="col-lg-4">
+      <h2 class="footer-heading mb-4">Connect With Us</h2>
+      <div class="social-links">
+        <a href="https://www.instagram.com/moderndentalclinicphagwara?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="instagram"><span class="icon-instagram"></span></a>
+      </div>
+      <div class="mt-4">
+        <p class="mb-2"><span class="icon-room mr-2"></span>Bhikhiwind</p>
+        <p class="mb-2"><span class="icon-phone mr-2"></span>79862-16497</p>
+        <p class="mb-2"><span class="icon-envelope mr-2"></span>bhikhiwinddentalclinic@gmail.com</p>
+      </div>
     </div>
   </div>
-</form>
-            </div>
+  <div class="row text-center">
+    <div class="col-md-12">
+      <div class="border-top pt-5">
+      <p>Copyright © 2025 All rights reserved to <a>Tooth&Tech</a>
 
-            <div class="row">
-              <div class="col-md-12">
-                <h3 class="footer-heading mb-4">Follow Us</h3>
-
-                <div>
-
-                  <a href="https://www.instagram.com/moderndentalclinicphagwara?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="pl-3 pr-3"><span class="icon-instagram"></span></a>
-                </div>
-              </div>
-            </div>
-
-
-          </div>
-          
-        </div>
-        <div class="row pt-5 mt-5 text-center">
-          <div class="col-md-12">
-            <p>
-              Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved to<a href="https://rakshitsharma.netlify.app/"> Rakshit Sharma</a>
-              </p>
-          </div>
-          
-        </div>
       </div>
-    </footer>
+    </div>
+  </div>
+</div>
+</footer>
   </div>
 
 
