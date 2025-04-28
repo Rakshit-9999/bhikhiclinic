@@ -17,8 +17,8 @@ WORKDIR /var/www/html
 # Install Composer
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
-# Install PHP dependencies
-RUN composer install
+# Install PHP dependencies (Allow running as root)
+RUN composer install --no-interaction --prefer-dist --optimize-autoloader --allow-root
 
 # Set correct permissions
 RUN chown -R www-data:www-data /var/www/html
