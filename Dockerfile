@@ -8,6 +8,9 @@ RUN apt-get update && apt-get install -y \
 # Enable Apache mod_rewrite
 RUN a2enmod rewrite
 
+# Set environment variable to allow Composer to run as root
+ENV COMPOSER_ALLOW_SUPERUSER=1
+
 # Copy app files
 COPY . /var/www/html/
 
@@ -17,8 +20,8 @@ WORKDIR /var/www/html
 # Install Composer
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
-# Install PHP dependencies (Allow running as root)
-RUN composer install --no-interaction --prefer-dist --optimize-autoloader --allow-root
+# Install PHP dependencies
+RUN composer install --no-interaction --prefer-dist --optimize-autoloader
 
 # Set correct permissions
 RUN chown -R www-data:www-data /var/www/html
